@@ -48,8 +48,9 @@ Keterangan:
 4. timestamp : kode waktu dari movie tersebut
 
 Berikut *overview* dataset movies.csv yang telah dijadikan dataframe.
-movie_df : dataset movies.csv yang dapat dilihat pada tabel berikut
-*Overview* movie_df
+movie_df : dataset movies.csv yang dapat dilihat pada tabel 1.
+
+Tabel 1. *Overview* movie_df
 | movieId | title	                                   | genres                                      |
 |---------|------------------------------------------|---------------------------------------------|
 | 1       | Toy Story (1995)                         | Adventure-Animation-Children-Comedy-Fantasy |
@@ -61,8 +62,9 @@ movie_df : dataset movies.csv yang dapat dilihat pada tabel berikut
 | 163056  | Shin Godzilla (2016)      | Action-Adventure-Fantasy-SciFi                            |
 | 163949  | The Beatles: Eight Days a Week - The Touring	     | Documentary                                      |
 
-rating_df : dataset ratings.csv yang dapat dilihat pada tabel berikut
-*Overview* rating_df
+rating_df : dataset ratings.csv yang dapat dilihat pada tabel 2.
+
+Tabel 2. *Overview* rating_df
 | userId | movieId | rating |
 |--------|---------|--------|
 | 1	     | 31	     | 2.5    |
@@ -74,8 +76,9 @@ rating_df : dataset ratings.csv yang dapat dilihat pada tabel berikut
 | 671    | 6269  | 4.0    |
 | 671    | 6365  | 4.0    |
 
-tags_df : dataset tags.csv yang dapat dilihat pada tabel berikut
-*Overview* tags_df
+tags_df : dataset tags.csv yang dapat dilihat pada tabel 3.
+
+Tabel 3. *Overview* tags_df
 | userId | movieId | tag              | timestamp  | 
 |--------|---------|------------------| ---------- |
 | 15	     | 339		 | funnysandra 'boring' bullock    | 1138537770 |
@@ -105,7 +108,16 @@ Model yang digunakan dalam proyek ini menggunakan *embedding technique*. Proyek 
 
 5. Dilanjutkan dengan menghitung *rating* rata-rata pengguna. Parameter yang digunakan adalah rating_df. userId sama dengan *userId*.
 
-Berikut list dari delapan movie recommendations yang didapatkan dari tugas ini.
+
+- Untuk parameter BatchNormalization yang digunakan bernilai x, dimana BatchNormalization dapat mempercepat kekonvergenan serta mempercepat proses training dan meningkatkan learning rates pada saat pembuatan model. 
+- Untuk parameter loss yang digunakan adalah 'binary_crossentropy', yang merupakan fungsi loss default yang digunakan untuk masalah klasifikasi biner.
+- Untuk parameter optimizer menggunakan ‘adam’, karena Adam adalah algoritma optimasi pengganti untuk stochastic gradient descent untuk training model.
+- Untuk function callback di berlakukan sebagai value di dalam function lain sehingga function callback akan di ekseskusi setelah function yang membungkus function callback tersebut selesai di eksekusi. 
+
+
+Pada tabel 4. Berikut list dari delapan movie recommendations yang didapatkan dari tugas ini.
+
+Tabel 4. *Movie Recommendation*
 | movieId | title	                             | genres                                          |
 |---------|------------------------------------|-------------------------------------------------|
 | 19       | Ace Ventura: When Nature Calls (1995)		| Comedy     |
@@ -125,25 +137,25 @@ Pada tahap evaluasi disini digunakan *mse* atau *mean squared error, precision, 
 
 ![mse](https://user-images.githubusercontent.com/112928081/193192963-b23c3d34-9077-4928-85db-44ffd618d133.jpg)
 
-MSE *Graphic*
+#### Gambar 1. MSE *Graphic*
 
-Dari grafik tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (MSE *Train*) menunjukkan penurunan. Sementara grafik dengan warna oranye (MSE *Test*) menunjukkan stabil.
+Dari grafik gambar 1 tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (MSE *Train*) menunjukkan penurunan. Sementara grafik dengan warna oranye (MSE *Test*) menunjukkan stabil.
 
 2. *Precission* merupakan tingkat keakurasian antara informasi yang diminta oleh pengguna dan respon dari sistem. Nilai *precission* yang diperoleh disini yaitu 1.0000.
 
 ![precision](https://user-images.githubusercontent.com/112928081/193192981-61bb67f0-fded-43a2-b387-e74013dadd99.jpg)
 
-*Precission graphic*
+#### Gambar 2. *Precission graphic*
 
-Dari grafik tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (*Precission Train*) menunjukkan penurunan. Sementara grafik dengan warna oranye (*Precission Test*) menunjukkan stabil.
+Dari grafik gambar 2 tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (*Precission Train*) menunjukkan penurunan. Sementara grafik dengan warna oranye (*Precission Test*) menunjukkan stabil.
 
 3. *Recall* merupakan tingkat keberhasilan dari sebuah sistem dalam menemukan kembali sebuah informasi. Nilai *recall* yang diperoleh disini yaitu 0.7143.
 
 ![recall](https://user-images.githubusercontent.com/112928081/193193002-7a772c0f-c8a3-4a07-b6c9-8473cd10a170.jpg)
 
-*Recall graphic*
+#### Gambar 3. *Recall graphic*
 
-Dari grafik tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (*Recall Train*) menunjukkan cenderung naik. Sementara grafik dengan warna oranye (*Recall Test*) menunjukkan cenderung turun.
+Dari grafik gambar 3 tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (*Recall Train*) menunjukkan cenderung naik. Sementara grafik dengan warna oranye (*Recall Test*) menunjukkan cenderung turun.
 
 ## Conclusion
 Dari tugas di atas dapat disimpulkan bahwa :
