@@ -122,18 +122,21 @@ Berikut list dari delapan movie recommendations yang didapatkan dari tugas ini.
 Pada tahap evaluasi disini digunakan *mse* atau *mean squared error, precision, dan recall*.
 
 1. *Mean Squared Error* atau MSE merupakan sebuah metode biasanya digunakan untuk memeriksa perkiraan nilai kesalahan dalam prediksi. Nilai *Mean Squared Error* yang rendah atau nilai kesalahan kuadrat rata-rata mendekati nol menunjukkan bahwa hasil prakiraan cocok dengan data aktual dan dapat digunakan untuk perhitungan prakiraan di masa mendatang. Metode *Mean Squared Error* umumnya digunakan untuk mengevaluasi metode pengukuran menggunakan regresi atau *prediction model* seperti *moving average, weighted moving average* dan analisis *trendline*. *Mean Squared Error* (MSE) dihitung dengan cara mengurangkan nilai data aktual dengan data prediksi, mengkuadratkan atau squared hasilnya, lalu menjumlahkan semuanya dan membaginya dengan jumlah data yang ada. Nilai *Mean Squared Error* yang diperoleh disini yaitu 0.0336.
+
 ![mse](https://user-images.githubusercontent.com/112928081/193192963-b23c3d34-9077-4928-85db-44ffd618d133.jpg)
 
 MSE *Graphic*
 Dari grafik tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (MSE *Train*) menunjukkan penurunan. Sementara grafik dengan warna oranye (MSE *Test*) menunjukkan stabil.
 
 2. *Precission* merupakan tingkat keakurasian antara informasi yang diminta oleh pengguna dan respon dari sistem. Nilai *precission* yang diperoleh disini yaitu 1.0000.
+
 ![precision](https://user-images.githubusercontent.com/112928081/193192981-61bb67f0-fded-43a2-b387-e74013dadd99.jpg)
 
 *Precission graphic*
 Dari grafik tersebut dihasilkan dari proses training model yang mana grafik dengan warna biru (*Precission Train*) menunjukkan penurunan. Sementara grafik dengan warna oranye (*Precission Test*) menunjukkan stabil.
 
 3. *Recall* merupakan tingkat keberhasilan dari sebuah sistem dalam menemukan kembali sebuah informasi. Nilai *recall* yang diperoleh disini yaitu 0.7143.
+
 ![recall](https://user-images.githubusercontent.com/112928081/193193002-7a772c0f-c8a3-4a07-b6c9-8473cd10a170.jpg)
 
 *Recall graphic*
